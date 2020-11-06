@@ -2,7 +2,7 @@
 
 namespace Lab2
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -24,14 +24,14 @@ namespace Lab2
             }
         }
 
-        static int FindCountEvenElements(int [] array)
+        public static int FindCountEvenElements(int[] array)
         {
             int countEvenElement = 0;
 
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] % 2 == 0)
-                    countEvenElement++;         
+                    countEvenElement++;
             }
 
             return countEvenElement;
@@ -70,7 +70,7 @@ namespace Lab2
             return array;
         }
 
-        static int FindIndexMin(int[] array)
+        public static int FindIndexMin(int[] array)
         {
             int min = int.MaxValue;
             int indexMinElement = -1;
