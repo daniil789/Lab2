@@ -16,11 +16,25 @@ namespace Lab2
                 int[] array = CreateRandomArray(n);
                 ShowArray(array);
                 Console.WriteLine($"Номер минимального элемента = {FindIndexMin(array)}");
+                Console.WriteLine($"Количество четных элементов массива = {FindCountEvenElements(array)}");
             }
             catch
             {
                 Error();
             }
+        }
+
+        static int FindCountEvenElements(int [] array)
+        {
+            int countEvenElement = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 == 0)
+                    countEvenElement++;         
+            }
+
+            return countEvenElement;
         }
 
         static void Error()
