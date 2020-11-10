@@ -17,11 +17,15 @@ namespace Lab2
                 ShowArray(array);
                 Console.WriteLine($"Номер минимального элемента = {FindIndexMin(array)}");
                 Console.WriteLine($"Количество четных элементов массива = {FindCountEvenElements(array)}");
+                Console.WriteLine();
+                Console.WriteLine($"S = 1/3^2 + 1/5^2 + 1/7^2... + 1/(2n+1)^2 = {Task3(n)}");
             }
             catch
             {
                 Error();
             }
+
+            
         }
 
         public static int FindCountEvenElements(int[] array)
@@ -84,6 +88,25 @@ namespace Lab2
                 }
             }
             return indexMinElement;
+        }
+
+        public static double Task3(int n)
+        {
+            double s = 0;
+            double denominator = 3;
+
+            for (int i = 0; i < n; i++)
+            {
+                s += 1 / Math.Pow(denominator, 2);
+            }
+
+            s += 1 / Math.Pow(2 * n + 1, 2);
+
+
+            return s;
+
+           
+
         }
     }
 }
