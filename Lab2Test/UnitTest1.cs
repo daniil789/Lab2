@@ -12,7 +12,6 @@ namespace Lab2Test
             int[] array = CreateArray();
             int count = Program.FindCountEvenElements(array);
             Assert.Equal(5, count);
-
         }
 
         [Fact]
@@ -21,8 +20,6 @@ namespace Lab2Test
             int[] array = CreateArray();
             int minIndex = Program.FindIndexMin(array);
             Assert.Equal(0, minIndex);
-
-
         }
 
         public int[] CreateArray()

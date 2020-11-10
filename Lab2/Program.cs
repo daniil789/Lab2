@@ -24,8 +24,6 @@ namespace Lab2
             {
                 Error();
             }
-
-            
         }
 
         public static int FindCountEvenElements(int[] array)
@@ -102,11 +100,7 @@ namespace Lab2
 
             s += 1 / Math.Pow(2 * n + 1, 2);
 
-
             return s;
-
-           
-
         }
     }
 }
