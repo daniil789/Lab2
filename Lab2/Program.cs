@@ -13,7 +13,7 @@ namespace Lab2
             Task2();
             Console.WriteLine();
             Console.WriteLine("Задание 3");
-            Task3(); 
+            Task3();
         }
 
         public static void Task1()
@@ -51,7 +51,6 @@ namespace Lab2
         {
             try
             {
-
                 Console.WriteLine("Вводите числа...");
                 int element = 1;
                 int countEvenElements = 0;
@@ -64,7 +63,6 @@ namespace Lab2
                         countEvenElements++;
                 }
                 Console.WriteLine($"Количество четных элементов в последовательности = {countEvenElements}");
-
             }
             catch
             {
@@ -89,18 +87,21 @@ namespace Lab2
 
                 if (n <= 0)
                     Error();
-
-                double s = 0;
-                double denominator = 3;
-
-                for (int i = 0; i < n; i++)
+                else
                 {
-                    s += 1 / Math.Pow(denominator, 2);
+
+                    double s = 0;
+                    double denominator = 3;
+
+                    for (int i = 0; i < n; i++)
+                    {
+                        s += 1 / Math.Pow(denominator, 2);
+                    }
+
+                    s += 1 / Math.Pow(2 * n + 1, 2);
+
+                    Console.WriteLine($"S = 1/3^2 + 1/5^2 + 1/7^2... + 1/(2n+1)^2 = {s}");
                 }
-
-                s += 1 / Math.Pow(2 * n + 1, 2);
-
-                Console.WriteLine($"S = 1/3^2 + 1/5^2 + 1/7^2... + 1/(2n+1)^2 = {s}");
             }
             catch
             {
