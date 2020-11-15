@@ -33,10 +33,10 @@ namespace Lab2
                     Console.WriteLine("Вводите числа...");
                     for (int i = 0; i < n; i++)
                     {
-                        int num = Convert.ToInt32(Console.ReadLine());
+                        int element = Convert.ToInt32(Console.ReadLine());
 
-                        if (num < minElement)
-                            minElement = num;
+                        if (element < minElement)
+                            minElement = element;
                     }
                     Console.WriteLine($"Минимальный элменет последовательности = {minElement}");
                 }
@@ -53,14 +53,14 @@ namespace Lab2
             {
 
                 Console.WriteLine("Вводите числа...");
-                int num = 1;
+                int element = 1;
                 int countEvenElements = 0;
-                while (num != 0)
+                while (element != 0)
                 {
-                    num = Convert.ToInt32(Console.ReadLine());
+                    element = Convert.ToInt32(Console.ReadLine());
 
 
-                    if (num % 2 == 0)
+                    if (element % 2 == 0)
                         countEvenElements++;
                 }
                 Console.WriteLine($"Количество четных элементов в последовательности = {countEvenElements}");
