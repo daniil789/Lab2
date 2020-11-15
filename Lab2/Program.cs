@@ -6,18 +6,30 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите размерность массива");
+            Console.WriteLine("Введите n...");
 
             int n;
 
             try
             {
                 n = Convert.ToInt32(Console.ReadLine());
-                int[] array = CreateRandomArray(n);
-                ShowArray(array);
-                Console.WriteLine($"Номер минимального элемента = {FindIndexMin(array)}");
-                Console.WriteLine($"Количество четных элементов массива = {FindCountEvenElements(array)}");
-                Console.WriteLine();
+                int minNum = int.MaxValue;
+                int countEvenElements = 0;
+                Console.WriteLine("Вводите числа...");
+
+                for (int i = 0; i < n; i++)
+                {
+                    int num = Convert.ToInt32(Console.ReadLine());
+
+                    if (num < minNum)
+                        minNum = num;
+
+                    if (num % 2 == 0)
+                        countEvenElements++;
+
+                }
+                Console.WriteLine($"Минимальный элменет последовательности = {minNum}");
+                Console.WriteLine($"Количество четных элементов в последовательности = {countEvenElements}");
                 Console.WriteLine($"S = 1/3^2 + 1/5^2 + 1/7^2... + 1/(2n+1)^2 = {Task3(n)}");
             }
             catch
